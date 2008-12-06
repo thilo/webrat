@@ -22,6 +22,8 @@ module Webrat
       SinatraSession
     when :mechanize
       MechanizeSession
+    when :html_unit
+      HtmlUnitSession
     else
       raise WebratError.new("Unknown Webrat mode: #{Webrat.configuration.mode.inspect}")
     end
